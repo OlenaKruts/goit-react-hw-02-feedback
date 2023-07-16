@@ -1,0 +1,21 @@
+.container__btn {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  background-color: aquamarine;
+  color: black;
+  font-weight: 700;
+  width: 100px;
+  cursor: pointer;
+  transition: color 250ms;
+}
+.button:hover {
+  scale: 1.1;
+  color: blue;
+}

@@ -1,0 +1,11 @@
+ul {
+  list-style: none;
+}
+
+.stat__item {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.statistic {
+  color: blue;
+}
