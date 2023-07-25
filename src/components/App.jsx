@@ -1,9 +1,17 @@
 // import { Feedback } from 'components/Feedback';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import { Statistics } from 'components/Statistics/Statistics';
 import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
 import { Section } from 'components/Section/Section';
 import { Notification } from 'components/Notification/Notification';
+
+const options = {
+  good: 'good',
+  neutral: 'neutral',
+  bad: 'bad',
+};
 
 export class App extends Component {
   state = {
@@ -31,7 +39,7 @@ export class App extends Component {
       <>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={this.state}
+            options={options}
             onLeaveFeedback={this.addFeedBack}
           />
         </Section>
@@ -52,3 +60,6 @@ export class App extends Component {
     );
   }
 }
+App.propTypes = {
+  options: PropTypes.arrayOf(['good', 'neutral', 'bad']).isRequired,
+};
